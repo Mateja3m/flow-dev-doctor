@@ -141,42 +141,6 @@ JSON:
 
 The wrapper defers generic behavior to shared packages and uses a local fallback runner for resilience.
 
-## Deliverables
-
-1. M1
-
-- working PoC CLI with `env/config/account/network/report`
-- shared package integration boundary
-
-2. M2
-
-- workflow check including bounded testnet/faucet readiness
-- improved structured failure reporting
-
-3. M3
-
-- polished demo and proposal-aligned documentation
-- extension points documented for future checks
-
-## Timeline
-
-1. Week 1: PoC baseline and shared-core integration
-2. Week 2: Flow check coverage and report hardening
-3. Week 3: demo polish, docs, and grant submission package
-
-## Success Metrics
-
-- first-run onboarding diagnostics complete in under 60 seconds
-- clear recommendation generated for each warn/fail check
-- both human and JSON outputs available for every run
-- no hard crash on config/account/network check failures
-
-## Roadmap / Extension Points
-
-- optional emulator/testnet dry-run command module
-- additional Flow project convention checks (Cadence/FCL patterns)
-- CI quality gates using JSON output
-
 ## Local Development
 
 ```bash
