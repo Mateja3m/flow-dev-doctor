@@ -4,7 +4,7 @@ import CheckCircleRounded from '@mui/icons-material/CheckCircleRounded';
 import ErrorRounded from '@mui/icons-material/ErrorRounded';
 import WarningRounded from '@mui/icons-material/WarningRounded';
 import { Box, Card, CardContent, Chip, Container, Divider, Stack, Typography } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 
 const sampleChecks = [
   {
@@ -89,8 +89,8 @@ export default function Page() {
             </Typography>
           </Box>
 
-          <Grid2 container spacing={3}>
-            <Grid2 size={{ xs: 12, md: 4 }}>
+          <Grid container spacing={3}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card elevation={0} sx={{ border: '1px solid', borderColor: 'divider' }}>
                 <CardContent>
                   <Typography variant="h5">Checks</Typography>
@@ -99,8 +99,8 @@ export default function Page() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }}>
+            </Grid>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card elevation={0} sx={{ border: '1px solid', borderColor: 'divider' }}>
                 <CardContent>
                   <Typography variant="h5">Reports</Typography>
@@ -110,8 +110,8 @@ export default function Page() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }}>
+            </Grid>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card elevation={0} sx={{ border: '1px solid', borderColor: 'divider' }}>
                 <CardContent>
                   <Typography variant="h5">Flow Value</Typography>
@@ -121,8 +121,8 @@ export default function Page() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid2>
-          </Grid2>
+            </Grid>
+          </Grid>
 
           <Card elevation={0} sx={{ border: '1px solid', borderColor: 'divider' }}>
             <CardContent>
@@ -158,8 +158,8 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          <Grid2 container spacing={3}>
-            <Grid2 size={{ xs: 12, md: 6 }}>
+          <Grid container spacing={3}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card
                 elevation={0}
                 sx={{ border: '1px solid', borderColor: 'divider', height: '100%' }}
@@ -180,8 +180,8 @@ export default function Page() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 6 }}>
+            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Card
                 elevation={0}
                 sx={{ border: '1px solid', borderColor: 'divider', height: '100%' }}
@@ -202,8 +202,8 @@ export default function Page() {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid2>
-          </Grid2>
+            </Grid>
+          </Grid>
 
           <Card elevation={0} sx={{ border: '1px solid', borderColor: 'divider' }}>
             <CardContent>
