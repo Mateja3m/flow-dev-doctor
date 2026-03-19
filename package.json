@@ -1,0 +1,76 @@
+{
+  "name": "@idoa/dev-doctor-flow",
+  "version": "0.1.0",
+  "description": "Flow-focused developer diagnostics and onboarding toolkit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateja3m/flow-dev-doctor.git"
+  },
+  "homepage": "https://github.com/Mateja3m/flow-dev-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/Mateja3m/flow-dev-doctor/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "flow-doctor": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CONTRIBUTING.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "workspaces": [
+    "demo"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist coverage .turbo",
+    "dev": "tsx src/cli.ts",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo:dev": "npm --workspace demo run dev",
+    "demo:build": "npm --workspace demo run build",
+    "demo:start": "npm --workspace demo run start",
+    "prepublishOnly": "npm run clean && npm run build && npm run typecheck && npm run lint"
+  },
+  "dependencies": {
+    "@idoa/dev-doctor-cli-kit": "^0.1.0",
+    "@idoa/dev-doctor-core": "^0.1.0",
+    "@idoa/dev-doctor-reporter": "^0.1.0",
+    "@idoa/dev-doctor-types": "^0.1.0",
+    "@idoa/dev-doctor-utils": "^0.1.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^2.1.8"
+  }
+}
